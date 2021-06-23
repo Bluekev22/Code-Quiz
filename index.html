@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p id="score">Score: 0</p>
+        <p id="time">Seconds Left: 75</p>
+    </header>
+    <!--Begin quiz section-->
+    <section class="start-box">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+        </p>
+        <button class="start-button">Start Quiz</button>
+    </section>
+    <!--Quiz-->
+    <main class="container hidden">
+        <div id="question"></div>
+        <div>
+            <button class="choice" id="A" onclick="checkAnswer('A')"></button>
+        </div>
+        <div>
+            <button class="choice" id="B" onclick="checkAnswer('B')"></button>
+        </div>
+        <div>
+            <button class="choice" id="C" onclick="checkAnswer('C')"></button>
+        </div>
+        <div>
+            <button class="choice" id="D" onclick="checkAnswer('D')"></button>
+        </div>
+        <!--div that shows answer after each question-->
+        <div>
+            <p id="show-answer"></p>
+        </div>
+    </main>
+    <!--Form to see score and input initials-->
+    <form class="form hidden">
+        <h1>Congratulations! 👏</h1>
+        <p class="final-score"></p>
+        <label for="Initials">Enter Initials:</label>
+        <input type="text" id="text">
+        <input id="submit" type="submit" value="Submit">
+    </form>
+    <!--Section with the list of scores-->
+    <section class="highscore hidden">
+        <h1>Highscores</h1>
+        <ol class="list"></ol>
+        <button class="back">Go Back</button>
+        <button class="clear">Clear Highscores</button>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
